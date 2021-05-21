@@ -1,0 +1,24 @@
+{
+  "name": "graphql-apollo-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-takahashi23/graphql-apollo-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k-takahashi23/graphql-apollo-express/issues"
+  },
+  "homepage": "https://github.com/k-takahashi23/graphql-apollo-express#readme",
+  "dependencies": {
+    "apollo-server": "^2.24.1",
+    "graphql": "^15.5.0"
+  }
+}
