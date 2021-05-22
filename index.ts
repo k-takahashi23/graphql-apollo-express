@@ -1,12 +1,12 @@
-const express = require('express');
-const { ApolloServer } = require('apollo-server-express');
-
-const { typeDefs } = require('./typeDefs');
-const { resolvers } = require('./resolvers');
+import express from 'express';
+import { ApolloServer } from 'apollo-server-express';
+import { typeDefs } from './typeDefs';
+import { resolvers } from './resolvers';
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
+
 server.applyMiddleware({ app });
 
 app.listen({ port: 4000 }, () =>
