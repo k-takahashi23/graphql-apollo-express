@@ -16,9 +16,10 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier",
   ],
   rules: {
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/require-await": 0,
     "no-extra-semi": "warn",
     "quotes": ["warn", "single"]
   },

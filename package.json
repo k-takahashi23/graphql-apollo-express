@@ -6,23 +6,14 @@
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register ./src/app.ts ",
     "check-types": "tsc --noEmit",
-    "eslint": "eslint src/**/*.ts",
-    "eslint:fix": "eslint src/**/*.ts --fix",
+    "eslint": "eslint ./src",
+    "eslint:fix": "eslint ./src --fix",
     "format": "prettier --write 'src/**/*.{js,ts,json}'",
     "lint": "npm-run-all eslint check-types",
     "lint:fix": "npm-run-all eslint:fix check-types format"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/k-takahashi23/graphql-apollo-express.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/k-takahashi23/graphql-apollo-express/issues"
-  },
-  "homepage": "https://github.com/k-takahashi23/graphql-apollo-express#readme",
+  "author": "k-takahashi23",
+  "license": "MIT",
   "dependencies": {
     "apollo-server": "^2.24.1",
     "apollo-server-express": "^2.24.1",

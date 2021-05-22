@@ -5,5 +5,5 @@ export interface Usecase<
   TRequest extends UsecaseRequest,
   TResponse extends UsecaseResponse
 > {
-  invoke(request: UsecaseRequest): Promise<UsecaseResponse>
+  invoke(request: TRequest): Promise<TResponse>
 }

@@ -19,6 +19,7 @@ export class FindAllUsersInteractor implements FindAllUsersUsecase {
   }
 
   public async invoke(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _request: FindAllUsersUsecaseRequest
   ): Promise<FindAllUsersUsecaseResponse> {
     const users = await this.usersRepository.findAll()
