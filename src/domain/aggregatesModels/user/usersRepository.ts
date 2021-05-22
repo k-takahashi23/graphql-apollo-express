@@ -1,5 +1,4 @@
+import { Repository } from "@/domain/seedwork";
 import { User } from ".";
 
-export interface UsersRepository {
-  findAll(): Promise<User[]>
-}
+export interface UsersRepository extends Repository<User> {}
