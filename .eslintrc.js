@@ -1,21 +1,22 @@
 module.exports = {
+  root: true,
   env: {
-    browser: true,
-    es2021: true,
+    es6: true,
+    node: true,
   },
-  extends: ['google'],
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
+    sourceType: "module",
     ecmaVersion: 12,
-    sourceType: 'module',
-    project: ['./tsconfig.eslint.json'],
+    tsconfigRootDir: __dirname,
+    project: ["./tsconfig.eslint.json"],
   },
-  plugins: [
-    '@typescript-eslint',
-    'prettier',
-    // 'prettier/@typescript-eslint',
+  plugins: ["@typescript-eslint"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier",
   ],
-  rules: {
-    'require-jsdoc': 0,
-  },
+  rules: {},
 };
