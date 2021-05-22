@@ -1,7 +1,7 @@
 export const helloResolver = {
   Query: {
     hello: async () => {
-      return "Hello World!";
+      return 'Hello World!'
     },
   },
-};
+}

@@ -1,29 +1,29 @@
-import "reflect-metadata";
-import { UsersRepository } from "@/domain/aggregatesModels/user/usersRepository";
-import { inject, injectable } from "inversify";
+import 'reflect-metadata'
+import { UsersRepository } from '@/domain/aggregatesModels/user/usersRepository'
+import { inject, injectable } from 'inversify'
 import {
   FindAllUsersUsecase,
   FindAllUsersUsecaseRequest,
   FindAllUsersUsecaseResponse,
-} from ".";
-import { TYPES } from "@/web/registories/inversify.types";
+} from '.'
+import { TYPES } from '@/web/registories/inversify.types'
 
 @injectable()
 export class FindAllUsersInteractor implements FindAllUsersUsecase {
-  private usersRepository: UsersRepository;
+  private usersRepository: UsersRepository
 
   public constructor(
     @inject(TYPES.UsersRepository) usersRepository: UsersRepository
   ) {
-    this.usersRepository = usersRepository;
+    this.usersRepository = usersRepository
   }
 
   public async invoke(
     _request: FindAllUsersUsecaseRequest
   ): Promise<FindAllUsersUsecaseResponse> {
-    const users = await this.usersRepository.findAll();
+    const users = await this.usersRepository.findAll()
     return {
       data: users,
-    };
+    }
   }
 }

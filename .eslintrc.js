@@ -18,5 +18,8 @@ module.exports = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier",
   ],
-  rules: {},
+  rules: {
+    "no-extra-semi": "warn",
+    "quotes": ["warn", "single"]
+  },
 };

@@ -1,6 +1,6 @@
 const TYPES = {
-  FindAllUsersUsecase: Symbol.for("FindAllUsersUsecase"),
-  UsersRepository: Symbol.for("UsersRepository"),
-};
+  FindAllUsersUsecase: Symbol.for('FindAllUsersUsecase'),
+  UsersRepository: Symbol.for('UsersRepository'),
+}
 
-export { TYPES };
+export { TYPES }

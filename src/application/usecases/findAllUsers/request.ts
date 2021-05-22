@@ -1,3 +1,3 @@
-import { UsecaseRequest } from "@/application/seedwork";
+import { UsecaseRequest } from '@/application/seedwork'
 
 export interface FindAllUsersUsecaseRequest extends UsecaseRequest {}
