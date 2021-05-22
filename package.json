@@ -40,7 +40,8 @@
     "typescript": "^4.2.4"
   },
   "lint-staged": {
-    "*.ts": "eslint --cache --fix && tsc --noEmit",
+    "*.{js,ts}": "eslint --cache --fix",
+    "*.ts": "tsc --noEmit",
     "*./src": "prettier --write"
   }
 }
