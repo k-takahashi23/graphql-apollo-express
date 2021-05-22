@@ -1,4 +1,4 @@
-export const resolvers = {
+export const queryResolver = {
   Query: {
     hello: () => 'Hello world!',
   },

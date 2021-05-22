@@ -1,8 +1,10 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-import { typeDefs } from './typeDefs';
-import { resolvers } from './resolvers';
+import { queryTypeDef } from './typeDefs';
+import { queryResolver } from './resolvers';
 
+const typeDefs = [queryTypeDef];
+const resolvers = [queryResolver];
 const server = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
