@@ -41,7 +41,7 @@
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
-    "*.ts": "tsc --noEmit",
+    "*.ts": "bash -c tsc --noEmit",
     "*./src": "prettier --write"
   }
 }
