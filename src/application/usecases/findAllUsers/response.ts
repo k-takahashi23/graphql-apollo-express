@@ -1,4 +1,4 @@
-import { User } from "@/domain/entities/user"
+import { User } from "@/domain/aggregatesModels/user"
 
 export interface FindAllUsersUsecaseResponse {
   data: User[];
