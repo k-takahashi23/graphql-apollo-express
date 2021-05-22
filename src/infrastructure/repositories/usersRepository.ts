@@ -1,7 +1,7 @@
-import 'reflect-metadata'
-import { User } from '@/domain/aggregatesModels/user'
-import { UsersRepository } from '@/domain/aggregatesModels/user/usersRepository'
-import { injectable } from 'inversify'
+import 'reflect-metadata';
+import { User } from '@/domain/aggregatesModels/user';
+import { UsersRepository } from '@/domain/aggregatesModels/user/usersRepository';
+import { injectable } from 'inversify';
 
 @injectable()
 export class MockUsersRepository implements UsersRepository {
@@ -22,7 +22,7 @@ export class MockUsersRepository implements UsersRepository {
         name: 'ccc',
         age: 25,
       },
-    ]
-    return mockUsers
+    ];
+    return mockUsers;
   }
 }

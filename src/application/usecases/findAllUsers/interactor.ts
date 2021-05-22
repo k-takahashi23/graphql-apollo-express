@@ -10,7 +10,7 @@ import { TYPES } from '@/web/registories/inversify.types';
 
 @injectable()
 export class FindAllUsersInteractor implements FindAllUsersUsecase {
-  private usersRepository: UsersRepository
+  private usersRepository: UsersRepository;
 
   public constructor(
     @inject(TYPES.UsersRepository) usersRepository: UsersRepository
@@ -23,7 +23,6 @@ export class FindAllUsersInteractor implements FindAllUsersUsecase {
     _request: FindAllUsersUsecaseRequest
   ): Promise<FindAllUsersUsecaseResponse> {
     const users = await this.usersRepository.findAll();
-    console.log('aaa');
     return {
       data: users,
     };

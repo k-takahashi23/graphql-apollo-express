@@ -1,4 +1,4 @@
-import { Repository } from '@/domain/seedwork'
-import { User } from '.'
+import { Repository } from '@/domain/seedwork';
+import { User } from '.';
 
-export type UsersRepository = Repository<User>
+export type UsersRepository = Repository<User>;
