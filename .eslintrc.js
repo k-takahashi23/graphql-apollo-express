@@ -10,10 +10,12 @@ module.exports = {
   'parserOptions': {
     'ecmaVersion': 12,
     'sourceType': 'module',
-    project: ['./tsconfig.eslint.json'],
+    'project': ['./tsconfig.eslint.json'],
   },
   'plugins': [
     '@typescript-eslint',
+    'prettier',
+    'prettier/@typescript-eslint',
   ],
   'rules': {
   },
