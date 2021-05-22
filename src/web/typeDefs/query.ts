@@ -2,6 +2,7 @@ import { gql } from 'apollo-server-express';
 
 export const queryTypeDef = gql`
   type Query {
-    hello: String
+    hello: String,
+    users: [User!]!,
   }
 `;

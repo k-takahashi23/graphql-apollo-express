@@ -1,10 +1,14 @@
-import { HelloUsecase } from '@/application/usecases/hello'
+import { FindAllUsersInteractor } from '@/application/usecases/findAllUsers';
 
 export const queryResolver = {
   Query: {
     hello: async () => {
-      const helloUsecase = new HelloUsecase();
-      return await helloUsecase.invoke();
+      return 'Hello World!';
     },
+    users: async () => {
+      const findAllUsersInteractor = new FindAllUsersInteractor();
+      const response = await findAllUsersInteractor.invoke({});
+      return response.data;
+    }
   },
 };
