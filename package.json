@@ -10,7 +10,8 @@
     "eslint:fix": "eslint ./src --fix",
     "format": "prettier --write ./src",
     "lint": "npm-run-all eslint check-types",
-    "lint:fix": "npm-run-all eslint:fix check-types format"
+    "lint:fix": "npm-run-all eslint:fix check-types format",
+    "prepare": "husky install"
   },
   "author": "k-takahashi23",
   "license": "MIT",
@@ -30,10 +31,16 @@
     "eslint": "^7.27.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "8.3.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "2.3.0",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.2.4"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*./src": "prettier --write"
   }
 }
