@@ -8,7 +8,7 @@
     "check-types": "tsc --noEmit",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint ./src --fix",
-    "format": "prettier --write 'src/**/*.{js,ts,json}'",
+    "format": "prettier --write ./src",
     "lint": "npm-run-all eslint check-types",
     "lint:fix": "npm-run-all eslint:fix check-types format"
   },
