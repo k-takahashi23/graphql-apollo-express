@@ -1,5 +1,5 @@
-import { FindAllUsersInteractor } from '@/application/usecases/findAllUsers';
-import { MockUsersRepository } from '@/infrastructure/repositories/usersRepository';
+import { FindAllUsersUsecase } from '@/application/usecases/findAllUsers';
+import { container } from '@/web/registories'
 
 export const queryResolver = {
   Query: {
@@ -7,9 +7,7 @@ export const queryResolver = {
       return 'Hello World!';
     },
     users: async () => {
-      // TODO: DI
-      const usersRepository = new MockUsersRepository();
-      const findAllUsersInteractor = new FindAllUsersInteractor(usersRepository);
+      const findAllUsersInteractor = container.get<FindAllUsersUsecase>('FindAllUsersUsecase');
       const response = await findAllUsersInteractor.invoke({});
       return response.data;
     }
