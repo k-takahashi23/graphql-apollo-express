@@ -1,4 +1,4 @@
-import { HelloUsecase } from '../../application/usecases/hello'
+import { HelloUsecase } from '@/application/usecases/hello'
 
 export const queryResolver = {
   Query: {

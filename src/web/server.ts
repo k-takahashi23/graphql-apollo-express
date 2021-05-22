@@ -1,6 +1,6 @@
 import { ApolloServer } from 'apollo-server-express';
-import { queryTypeDef } from './typeDefs';
-import { queryResolver } from './resolvers';
+import { queryTypeDef } from '@/web/typeDefs';
+import { queryResolver } from '@/web/resolvers';
 
 const typeDefs = [queryTypeDef];
 const resolvers = [queryResolver];
