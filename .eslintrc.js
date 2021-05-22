@@ -1,22 +1,19 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es2021': true,
+  env: {
+    browser: true,
+    es2021: true,
   },
-  'extends': [
-    'google',
-  ],
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
-    'ecmaVersion': 12,
-    'sourceType': 'module',
-    'project': ['./tsconfig.eslint.json'],
+  extends: ['google'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
+    project: ['./tsconfig.eslint.json'],
   },
-  'plugins': [
+  plugins: [
     '@typescript-eslint',
     'prettier',
-    'prettier/@typescript-eslint',
+    // 'prettier/@typescript-eslint',
   ],
-  'rules': {
-  },
+  rules: {},
 };
