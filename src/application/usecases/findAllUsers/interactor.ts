@@ -2,12 +2,13 @@ import "reflect-metadata";
 import { UsersRepository } from "@/domain/aggregatesModels/user/usersRepository";
 import { inject, injectable } from "inversify";
 import { FindAllUsersUsecase, FindAllUsersUsecaseRequest, FindAllUsersUsecaseResponse } from ".";
+import { TYPES } from "@/web/registories/inversify.types";
 
 @injectable()
 export class FindAllUsersInteractor implements FindAllUsersUsecase {
   private usersRepository: UsersRepository;
 
-  public constructor(@inject('UsersRepository') usersRepository: UsersRepository) {
+  public constructor(@inject(TYPES.UsersRepository) usersRepository: UsersRepository) {
     this.usersRepository = usersRepository;
   }
 

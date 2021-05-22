@@ -1,5 +1,6 @@
 import "reflect-metadata";
 import { Container } from 'inversify';
+import { TYPES } from './inversify.types'
 import {
   FindAllUsersInteractor,
   FindAllUsersUsecase,
@@ -15,12 +16,12 @@ const container = new Container();
 
 // Usecases
 container
-  .bind<FindAllUsersUsecase>('FindAllUsersUsecase')
+  .bind<FindAllUsersUsecase>(TYPES.FindAllUsersUsecase)
   .to(FindAllUsersInteractor);
   
 // Repositories
 container
-  .bind<UsersRepository>('UsersRepository')
+  .bind<UsersRepository>(TYPES.UsersRepository)
   .to(MockUsersRepository);
 
 export { container }
