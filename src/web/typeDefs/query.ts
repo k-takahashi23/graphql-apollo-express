@@ -4,5 +4,6 @@ export const queryTypeDef = gql`
   type Query {
     hello: String
     users: [User!]!
+    user: User
   }
 `;

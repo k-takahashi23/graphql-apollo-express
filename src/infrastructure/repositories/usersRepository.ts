@@ -25,4 +25,14 @@ export class MockUsersRepository implements UsersRepository {
     ];
     return mockUsers;
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public async find(_id: string): Promise<User> {
+    const mockUser = {
+      id: 'user4',
+      name: 'ddd',
+      age: 28,
+    };
+    return mockUser;
+  }
 }
